@@ -1,0 +1,235 @@
+.campo-externo {
+  width: 800px;
+  height: 540px;
+  position: relative;
+  background: repeating-linear-gradient(
+    90deg,
+    #006400,
+    #006400 40px,
+    #008000 40px,
+    #008000 80px
+  );
+  background-position: 0 0;
+  background-size: 80px 100%;
+  box-shadow: 0px 0px 15px #000;
+}
+
+.cancha {
+  width: 720px;
+  height: 440px;
+  position: relative;
+  margin: 0 auto;
+  top: calc(50% - 440px / 2);
+}
+
+.linea {
+  background: white;
+  position: absolute;
+  z-index: 2;
+}
+
+.contorno.linea {
+  border: 2px solid white;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.linea-central {
+  width: 2px;
+  height: 100%;
+  top: 0;
+  left: calc(50% - 1px);
+  background: white;
+  position: absolute;
+  z-index: 2;
+}
+
+.circulo-central {
+  width: 160px;
+  height: 160px;
+  border-radius: 160px;
+  border: 2px solid white;
+  background: none;
+  top: calc(50% - 80px);
+  left: calc(50% - 80px);
+  position: absolute;
+  z-index: 2;
+}
+
+.area {
+  top: 25%;
+  width: 17%;
+  height: 50%;
+  background: transparent;
+  border: 2px solid white;
+  position: absolute;
+  z-index: 2;
+}
+.area.izquierda {
+  left: 0;
+}
+.area.derecha {
+  right: 0;
+}
+.area.chica {
+  top: 36%;
+  width: 5.5%;
+  height: 28%;
+}
+
+.medi-luna {
+  top: 35%;
+  width: 17%;
+  height: 30%;
+  background: transparent;
+  border: 2px solid white;
+  position: absolute;
+  z-index: 2;
+}
+.medi-luna.izquierda {
+  left: 5%;
+  border-left: none;
+  border-bottom-right-radius: 1000px;
+  border-top-right-radius: 1000px;
+  clip-path: inset(0 0 0 70%);
+}
+.medi-luna.derecha {
+  right: 5%;
+  border-right: none;
+  border-bottom-left-radius: 1000px;
+  border-top-left-radius: 1000px;
+  clip-path: inset(0 70% 0 0);
+}
+
+.punto {
+  width: 4px;
+  height: 4px;
+  border-radius: 4px;
+  top: calc(50% - 2px);
+  background: white;
+  position: absolute;
+  z-index: 2;
+}
+.punto.izquierda {
+  left: 10.8%;
+}
+.punto.derecha {
+  right: 10.8%;
+}
+.punto.central {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+
+.corner {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  background: transparent !important;
+  z-index: 2;
+}
+
+.corner.arriba-izquierda {
+  top: 0;
+  left: 0;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  border-radius: 0 0 100% 0;
+}
+
+.corner.arriba-derecha {
+  top: 0;
+  right: 0;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+  border-radius: 0 0 0 100%;
+}
+
+.corner.abajo-izquierda {
+  bottom: 0;
+  left: 0;
+  border-right: 2px solid white;
+  border-top: 2px solid white;
+  border-radius: 0 100% 0 0;
+}
+
+.corner.abajo-derecha {
+  bottom: 0;
+  right: 0;
+  border-left: 2px solid white;
+  border-top: 2px solid white;
+  border-radius: 100% 0 0 0;
+}
+
+
+
+
+
+.porteria {
+  width: 16px;
+  height: 54px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  /* Network/Net effect using repeating patterns */
+  background-image: 
+    repeating-linear-gradient(45deg, rgba(255,255,255,0.1) 0px, rgba(255,255,255,0.1) 1px, transparent 1px, transparent 4px),
+    repeating-linear-gradient(-45deg, rgba(255,255,255,0.1) 0px, rgba(255,255,255,0.1) 1px, transparent 1px, transparent 4px);
+}
+
+.porteria.izquierda {
+  left: -16px;
+  border: 2px solid white;
+  border-right: none;
+}
+
+.porteria.derecha {
+  right: -16px;
+  border: 2px solid white;
+  border-left: none;
+}
+
+.zona-tecnica {
+  width: 120px;
+  height: 30px;
+  position: absolute;
+  border: 3px dashed white;
+  border-bottom: none;
+  z-index: 3;
+  line-height: 20px;
+  text-align: center;
+  color: white;
+}
+
+.zona-tecnica.local {
+  bottom: 0px;
+  left: 240px;
+}
+
+.zona-tecnica.visitante {
+  bottom: 0px;
+  right: 240px;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+* {
+  box-sizing: border-box;
+}
+
+
+
