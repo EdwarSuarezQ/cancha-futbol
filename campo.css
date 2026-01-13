@@ -194,7 +194,7 @@
   width: 120px;
   height: 30px;
   position: absolute;
-  border: 3px dashed white;
+  border: 2px dashed white;
   border-bottom: none;
   z-index: 3;
   line-height: 20px;
@@ -204,12 +204,12 @@
 
 .zona-tecnica.local {
   bottom: 0px;
-  left: 240px;
+  left: 200px;
 }
 
 .zona-tecnica.visitante {
   bottom: 0px;
-  right: 240px;
+  right: 200px;
 }
 
 html,
@@ -227,5 +227,140 @@ body {
   box-sizing: border-box;
 }
 
+@media (max-width: 600px) {
+  .campo-externo {
+    width: 380px;
+    height: 600px;
+    background: repeating-linear-gradient(
+      0deg,
+      #006400,
+      #006400 30px,
+      #008000 30px,
+      #008000 60px
+    );
+    background-size: 100% 60px;
+  }
 
+  .cancha {
+    width: 320px;
+    height: 540px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 
+  .linea-central {
+    width: 100%;
+    height: 2px;
+    left: 0;
+    top: calc(50% - 1px);
+  }
+
+  .cancha > .porteria,
+  .cancha > .area,
+  .cancha > .medi-luna,
+  .cancha > .punto {
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .porteria {
+    width: 50px;
+    height: 16px;
+  }
+
+  .porteria.izquierda {
+    top: -16px;
+    border: 2px solid white;
+    border-bottom: none;
+  }
+
+  .porteria.derecha {
+    bottom: -16px;
+    top: auto;
+    border: 2px solid white;
+    border-top: none;
+  }
+
+  .area {
+    width: 220px;
+    height: 90px;
+  }
+
+  .area.izquierda { top: 0; }
+  .area.derecha { bottom: 0; top: auto; }
+
+  .area.chica {
+    width: 100px;
+    height: 30px;
+  }
+
+  .area.izquierda.chica { top: 0; }
+  .area.derecha.chica { bottom: 0; top: auto; }
+
+  .medi-luna {
+    width: 120px !important;
+    height: 120px !important;
+    border: 2px solid white !important;
+    border-radius: 50% !important;
+    background: transparent !important;
+    z-index: 1 !important;
+  }
+
+  .medi-luna.izquierda {
+    top: 0 !important;
+    clip-path: inset(90px 0 0 0) !important;
+  }
+
+  .medi-luna.derecha {
+    bottom: 0 !important;
+    top: auto !important;
+    clip-path: inset(0 0 90px 0) !important;
+  }
+
+  .punto.izquierda { top: 59px; }
+  .punto.derecha { bottom: 58px; top: auto; }
+
+  .punto.central {
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    z-index: 10;
+  }
+
+  .circulo-central {
+    width: 120px;
+    height: 120px;
+    top: calc(50% - 60px);
+    left: calc(50% - 60px);
+  }
+
+  .zona-tecnica {
+    display: block !important;
+    width: 20px;
+    height: 90px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    border: 2px dashed white;
+    line-height: 20px;
+    right: auto !important;
+  }
+
+  .zona-tecnica.local {
+    left: 1px;
+    top: 150px;
+    border-left: none;
+  }
+
+  .zona-tecnica.visitante {
+    left: 1px;
+    bottom: 150px;
+    top: auto !important;
+    border-left: none;
+  }
+
+  .corner { width: 10px; height: 10px; }
+  .corner.arriba-izquierda { top: 0; left: 0; border-radius: 0 0 100% 0; border: 2px solid white; border-top: none; border-left: none; }
+  .corner.arriba-derecha { top: 0; right: 0; border-radius: 0 0 0 100%; border: 2px solid white; border-top: none; border-right: none; }
+  .abajo-izquierda { bottom: 0; left: 0; border-radius: 0 100% 0 0; border: 2px solid white; border-bottom: none; border-left: none; }
+  .abajo-derecha { bottom: 0; right: 0; border-radius: 100% 0 0 0; border: 2px solid white; border-bottom: none; border-right: none; }
+}
