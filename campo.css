@@ -318,7 +318,7 @@ body {
     clip-path: inset(0 0 90px 0) !important;
   }
 
-  .punto.izquierda { top: 59px; }
+  .punto.izquierda { top: 58px; }
   .punto.derecha { bottom: 58px; top: auto; }
 
   .punto.central {
